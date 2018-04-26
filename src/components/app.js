@@ -1,24 +1,16 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import React from "react";
+import { Component } from "react";
 
-import BookList from '../containers/book-list'
+import BookList from "../containers/book-list";
+import BookDetail from "../containers/book-detail";
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div>
         <BookList />
+        <BookDetail />
       </div>
-
     );
   }
 }
-
-function mapStateToProps(state) {
-  //the object returned below will show up as props inside BookList
-  return {
-    books: state.books
-  };
-}
-
-export default connect(mapStateToProps)(BookList)
